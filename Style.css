@@ -1,94 +1,184 @@
-@import url(http://fonts.googleapis.com/css?family=Rokkitt);
-c h1 {
-    font-family: 'Rokkitt', serif;
-    text-align: center;
-    color: #fff;
-    font-size: 35px;
+body {
+    font-family: "Nunito Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-ul {
-    list-style: none;
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
 }
 
-li {
-    font-family: 'Rokkitt', serif;
-    font-size: 2em;
-    color: #feb135;
-}
-
-input[type=radio] {
-    border: 0px;
-    width: 20px;
-    height: 2em;
+.carousel-item {
+    height: 100vh;
 }
 
 p {
-    font-family: 'Rokkitt', serif;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0 0 15px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.footer-widget h6 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-widget ul li {
+    line-height: 36px;
+    list-style: none;
+}
+
+.footer-widget ul li a {
+    font-size: 15px;
+}
+
+.footer-widget ul li a:hover {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-copyright-text {
+    border-top: 1px solid #000;
 }
 
 
-/* Quiz Classes */
+/* quiz section */
 
-.quizContainer {
-    background-color: #000398;
-    border-radius: 8px;
-    width: 75%;
-    margin: auto;
-    margin-top: 190px;
-    padding-top: 5px;
-    position: relative;
+.choice-container {
+    display: flex;
+    align-items: center;
+    border: #28a745 1px solid;
+    height: 58px;
+    margin-bottom: 20px;
+    border-radius: 42px;
+    background-color: white;
 }
 
-.nextButton {
-    border-radius: 6px;
-    width: 150px;
-    height: 40px;
+.choice-container:hover {
+    cursor: pointer;
+}
+
+.choice-prefix {
+    background-color: #28a745;
+    color: white;
+    border-radius: 42px;
+}
+
+.choice-text {
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.correct {
+    background-color: #28a745;
+}
+
+.incorrect {
+    background-color: #dc3545;
+}
+
+
+/* HUD */
+
+#hud-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    font-size: 2rem;
+}
+
+#progressBar {
+    width: 200px;
+    height: 30px;
+    top: 80px;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+}
+
+#progressBarFull {
+    height: 30px;
+    background-color: #28a745;
+    width: 0%;
+    border-radius: 5px;
+}
+
+
+/*End quiz section */
+
+
+/* UTILITIES */
+
+.container-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* BUTTONS */
+
+.score-btn {
+    width: 20rem;
+    background-color: #28a745;
     text-align: center;
-    background-color: #cc0000;
-    /*clear: both;*/
-    color: #fff;
-    font-family: 'Rokkitt', serif;
-    font-weight: bold;
-    position: relative;
-    margin: auto;
-    padding-top: 20px;
 }
 
-.question {
-    font-family: 'Rokkitt', serif;
-    font-size: 2em;
-    width: 90%;
-    height: auto;
-    margin: auto;
-    border-radius: 6px;
-    background-color: #f2f205;
-    text-align: center;
-    color: #27aa63;
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
 
-.quizMessage {
-    background-color: peachpuff;
-    border-radius: 6px;
-    width: 30%;
-    margin: auto;
-    text-align: center;
-    padding: 2px;
-    font-family: 'Rokkitt', serif;
-    color: red;
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
 }
 
-.choiceList {
-    font-family: 'Courier New', Courier, monospace;
-    color: blueviolet;
+
+/* FORMS */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.result {
-    width: 30%;
-    height: auto;
-    border-radius: 6px;
-    background-color: linen;
-    margin: auto;
-    margin-bottom: 35px;
-    text-align: center;
-    font-family: 'Rokkitt', serif;
+input {
+    width: 20rem;
+    outline: none;
+    border: #28a745 1px solid;
 }
