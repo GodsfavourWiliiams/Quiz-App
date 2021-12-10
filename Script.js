@@ -10,8 +10,15 @@ let questionCounter = 0;
 let availableQuesions = [];
 
 let questions = [];
-
-fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple')
+fetch('https://opentdb.com/api.php?amount=20&category=21&type=multiple') //sport
+fetch('https://opentdb.com/api.php?amount=20&category=19&difficulty=easy&type=multiple') // mathematics
+fetch('https://opentdb.com/api.php?amount=20&category=20&difficulty=easy&type=multiple') //mythology
+fetch('https://opentdb.com/api.php?amount=20&category=10&difficulty=easy&type=multiple') //books
+fetch('https://opentdb.com/api.php?amount=20&category=18&difficulty=medium&type=multiple') // computer
+fetch('https://opentdb.com/api.php?amount=20&category=30&type=multiple') //gadgets
+fetch('https://opentdb.com/api.php?amount=20&category=23&difficulty=medium&type=multiple') //history
+fetch('https://opentdb.com/api.php?amount=20&category=25&difficulty=hard&type=multiple') //art
+fetch('https://opentdb.com/api.php?amount=20&category=30&type=multiple') //general
     .then((res) => {
         return res.json();
     })
@@ -98,7 +105,7 @@ choices.forEach((choice) => {
             getNewQuestion();
         }, 1000);
     });
-});
+}); 
 
 incrementScore = (num) => {
     score += num;

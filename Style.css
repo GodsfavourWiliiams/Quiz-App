@@ -125,26 +125,22 @@ a:focus {
 
 /*End quiz section */
 
-
-/* UTILITIES */
-
-.container-wrap {
-    width: 100%;
+.contain-wrap {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 90rem;
-    margin: 0 auto;
 }
 
-.flex-column {
+.quiz-container {
+    width: 100%;
+    max-width: 700px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.hidden {
-    display: none;
+    margin: auto;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 
